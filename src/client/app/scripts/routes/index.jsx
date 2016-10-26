@@ -1,6 +1,9 @@
+/*
+ * Define routes for the project.
+ */
 import React from 'react';
-import { Router, Route, browserHistory} from 'react-router';
 import App from 'scripts/App.jsx';
+import { Router, Route, browserHistory} from 'react-router';
 
 class Routes extends React.Component {
   render() {

@@ -1,16 +1,31 @@
 var webpack = require('webpack');
 var path = require('path');
-
+/*
+ * Defines path here.
+ */
 var BUILD_DIR = path.resolve(__dirname, 'src/client/public');
 var APP_DIR = path.resolve(__dirname, 'src/client/app');
 
+/*
+ * Config file for webpack.
+ * Change here in order to change the webpack settings
+ */
 var config = {
+  /*
+   * Entry point describes the single page app JS.
+   */
   entry: APP_DIR + '/index.jsx',
+  /*
+   * Output describes the properties of bundle js
+   */
   output: {
     path: BUILD_DIR,
     publicPath: '/public/',
     filename: 'bundle.js'
   },
+  /*
+   * Loaders for ES6 (babel), styles (SASS Loader), (font) file loader and image.
+   */
   module : {
     loaders : [
       {
@@ -37,6 +52,9 @@ var config = {
       }
     ]
   },
+  /*
+   * Describes the root component. All imports can be done with absolute address  
+   */
   resolve : {
     root : path.resolve('src/client/app')
   },
