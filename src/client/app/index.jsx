@@ -1,15 +1,9 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Router, Route, browserHistory } from 'react-router';
-
-class App extends React.Component {
-  render () {
-    return (
-      <p> this is simple </p>
-    );
-  }
-}
+import { Router, Route, browserHistory} from 'react-router';
+import App from 'scripts/App.jsx';
 
 render(<Router history = { browserHistory }>
   <Route path = "/" component = { App } />
   </Router>, document.getElementById('app'));
+//render(<App />, document.getElementById('app'));
