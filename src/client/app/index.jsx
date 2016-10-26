@@ -1,15 +1,15 @@
 import React from 'react';
-import {render} from 'react-dom';
-var x = () => {
-  console.log(" this should work ");
-}
+import { render } from 'react-dom';
+import { Router, Route, browserHistory } from 'react-router';
+
 class App extends React.Component {
   render () {
-    x();
     return (
       <p> this is simple </p>
     );
   }
 }
 
-render(<App/>, document.getElementById('app'));
+render(<Router history = { browserHistory }>
+  <Route path = "/" component = { App } />
+  </Router>, document.getElementById('app'));
