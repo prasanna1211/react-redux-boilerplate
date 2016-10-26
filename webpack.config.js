@@ -20,11 +20,20 @@ var config = {
       },
       {
         test: /\.scss$/,
+        include : APP_DIR,
         loaders: ['style', 'css', 'sass']
       },
       {
         test : /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
+        include : APP_DIR,
         loader : 'file-loader'
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loaders: [
+          'file?hash=sha512&digest=hex&name=[hash].[ext]',
+          'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
+        ]
       }
     ]
   },
