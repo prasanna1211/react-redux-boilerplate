@@ -30,7 +30,8 @@ var config = {
   },
   resolve : {
     root : path.resolve('src/client/app')
-  }
+  },
+  devtool: "eval-source-map"
 };
 
 module.exports = config;
