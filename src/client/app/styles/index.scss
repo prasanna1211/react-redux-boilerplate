@@ -1,4 +1,10 @@
-.styling {
-  font-size: 21;
+@font-face {
+  font-family: 'newStyle';
+  src: url('./fonts/Thinking_of_Betty.ttf');
+}
+
+body {
+  font-family: 'newStyle';
+  font-size: 25;
   color: red;
 }
