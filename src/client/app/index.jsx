@@ -1,9 +1,14 @@
 import React from 'react';
 import {render} from 'react-dom';
-
+var x = () => {
+  console.log(" this should work ");
+}
 class App extends React.Component {
   render () {
-    return <p> Hello Reacts!</p>;
+    x();
+    return (
+      <p> this is simple </p>
+    );
   }
 }
 
