@@ -2,8 +2,8 @@
  *  Helper file
  */
 
- import { httpRequests } from 'scripts/helpers/httpRequests';
+import * as httpRequests from 'scripts/helpers/httpRequests.jsx';
 
- export default {
+export {
  	httpRequests
- }
+};

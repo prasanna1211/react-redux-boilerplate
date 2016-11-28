@@ -29,7 +29,7 @@ const postRequest = (url, body, successCallback, errorCallback) => {
 		.then(errorCallback)
 }
 
-export default {
+export {
 	getRequest,
 	postRequest
-}
+};
