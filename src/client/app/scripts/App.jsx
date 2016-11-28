@@ -3,10 +3,20 @@
  */
 import React from 'react';
 import { dummyActionCreators } from 'scripts/actions/index.jsx';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import Immutable from 'immutable';
 
 class App extends React.Component {
+
+	componentWillMount() {
+		this.props.dummyAction.fetchDataFromServer();
+	}
+	
   render() {
-  	dummyActionCreators.fetchDataFromServer();
+  	var map1 = Immutable.Map({ a: 1, b : [2, 3]});
+    var map2 = map1.set('b', [3, 4]);
+    console.log(map2.toJS());
     return (
       <div>
         Successfully loaded React Project
@@ -15,4 +25,12 @@ class App extends React.Component {
   }
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+  dummyReducer : state.dummyReducer
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  dummyAction : bindActionCreators(dummyActionCreators, dispatch)
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

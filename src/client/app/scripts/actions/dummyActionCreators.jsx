@@ -1,23 +1,42 @@
 /*
  * Sample action creators for HTTP GET
  */
-
-import { httpRequests } from 'scripts/actions/index.jsx';
+import { httpRequests } from 'scripts/helpers/index.jsx';
 
 const dataFetchInitatedToServer = () => {
-	console.log(" initated ");
+	return {
+		type : "initated",
+		payload : {
+			"intiated" : true
+		}
+	};
 }
-const dataFetchSuccess = () => {
-	console.log(" success ");
+const dataFetchSuccess = (data) => {
+	return {
+		type : "success",
+		payload : {
+			"success" : true 
+		}
+	};
 }
-const dataFetchFailure = () => {
-	console.log(" failure ");
+const dataFetchFailure = (error) => {
+	return {
+		type : "error",
+		payload : {
+			"success" : true
+		}
+	};
 }
 const fetchDataFromServer = () => {
 	return (dispatch) => {
 		dispatch(dataFetchInitatedToServer());
-		dispatch(dataFetchSuccess());
-		dispatch(dataFetchFailure());
+		var successCallback = (data) => {
+			dispatch(dataFetchSuccess(data));
+		};
+		var errorCallback = (error) => {
+			dispatch(dataFetchFailure(error));
+		};
+		return httpRequests.getRequest("https://private-6a1abf-welllist.apiary-mock.com/welldata", {}, {}, successCallback, errorCallback);
 	}
 }
 
