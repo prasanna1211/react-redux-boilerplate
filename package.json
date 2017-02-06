@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "eslint ./ --ext .jsx .js",
+    "test": "eslint ./ --ext .jsx --ext .js",
     "watch": "webpack -d --watch",
     "build": "webpack -p",
     "start": "webpack-dev-server --hot --inline --content-base ./src/client"
@@ -33,6 +33,7 @@
     "webpack-dev-server": "^1.16.2"
   },
   "devDependencies": {
+    "babel-eslint": "^7.1.1",
     "css-loader": "^0.25.0",
     "eslint": "^3.15.0",
     "eslint-config-airbnb": "^14.1.0",
