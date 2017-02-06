@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "eslint ./ --ext .jsx --ext .js",
+    "lint": "eslint ./ --ext .jsx --ext .js || true",
     "watch": "webpack -d --watch",
     "build": "webpack -p",
-    "start": "webpack-dev-server --hot --inline --content-base ./src/client"
+    "start": "webpack-dev-server --hot --inline --content-base ./src/client --port 3000"
   },
   "author": "",
   "license": "ISC",

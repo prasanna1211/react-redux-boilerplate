@@ -12,7 +12,7 @@ var reduxLogger = createLogger();
 
 /*
  * Single store for the entire app
- * Middleware chain thunk -> reduxLogger. 
+ * Middleware chain thunk -> reduxLoggers.
  */
 let store = createStore(rootReducer, applyMiddleware(thunk, reduxLogger));
 
