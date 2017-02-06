@@ -34,6 +34,11 @@ var config = {
         loader: 'babel'
       },
       {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loaders: ['babel-loader', 'eslint-loader']
+      },
+      {
         test: /\.scss$/,
         include : APP_DIR,
         loaders: ['style', 'css', 'sass']
@@ -53,12 +58,15 @@ var config = {
     ]
   },
   /*
-   * Describes the root component. All imports can be done with absolute address  
+   * Describes the root component. All imports can be done with absolute address
    */
   resolve : {
     root : path.resolve('src/client/app')
   },
-  devtool: "eval-source-map"
+  devtool: "eval-source-map",
+  eslint: {
+    configFile: './.eslintrc'
+  },
 };
 
 module.exports = config;
