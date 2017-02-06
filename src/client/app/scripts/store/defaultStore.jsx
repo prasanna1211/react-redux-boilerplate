@@ -1,3 +1,3 @@
 export default {
-	defaultValue : 1	
-}
+  defaultValue: 1,
+};
