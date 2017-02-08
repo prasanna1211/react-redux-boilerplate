@@ -3,12 +3,10 @@
  */
 import React from 'react';
 
-var Navbar = () => {
-  return (
-    <nav>
-      Navbar
-    </nav>
-  );
-}
+const Navbar = () => (
+  <nav>
+    Navbar
+  </nav>
+);
 
 export default Navbar;

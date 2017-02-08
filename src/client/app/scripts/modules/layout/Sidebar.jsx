@@ -3,12 +3,10 @@
  */
 import React from 'react';
 
-var Sidebar = () => {
-  return (
-    <nav>
-      Sidebar
-    </nav>
-  );
-}
+const Sidebar = () => (
+  <nav>
+    Sidebar
+  </nav>
+);
 
 export default Sidebar;
