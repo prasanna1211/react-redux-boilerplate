@@ -1,3 +1,0 @@
-/**
- * Root Action Creators
- */

@@ -2,12 +2,14 @@
  * Define routes for the project.
  */
 import React from 'react';
-import App from 'scripts/modules/demo/components/presentational/App.jsx';
-import { Router, Route, browserHistory } from 'react-router';
+import { Router, browserHistory } from 'react-router';
+
+// Composed routes for demo module
+import DemoRoutes from 'scripts/modules/demo/routes.jsx';
 
 const Routes = () => (
   <Router history={browserHistory}>
-    <Route path="/" component={App} />
+    { DemoRoutes }
   </Router>
 );
 
