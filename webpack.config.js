@@ -13,7 +13,7 @@ const config = {
   /*
    * Entry point describes the single page app JS.
    */
-  entry: `${APP_DIR}/${rootJsx}`,
+  entry: ['babel-polyfill', `${APP_DIR}/${rootJsx}`],
   /*
    * Output describes the properties of bundle js
    */
