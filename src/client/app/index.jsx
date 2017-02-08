@@ -1,4 +1,4 @@
-/*
+/**
  * Index page of the app.
  * Routes handles the app's routing.
  */
