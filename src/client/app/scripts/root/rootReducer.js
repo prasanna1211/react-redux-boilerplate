@@ -1,9 +1,10 @@
 /*
- * Reducer for the apps
+ *  Root Reducer
  */
 import { combineReducers } from 'redux';
 
-export default combineReducers({
-  a: 1,
-});
+const defaultReducer = () => 'default';
 
+export default combineReducers({
+  defaultReducer,
+});

@@ -3,7 +3,7 @@
  */
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import rootReducer from 'scripts/reducers/index.jsx';
+import rootReducer from 'scripts/root/rootReducer.js';
 import createLogger from 'redux-logger';
 
 // Logger for redux actions and actioncreators on console
